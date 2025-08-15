@@ -22,8 +22,18 @@ export default function MaintenancePage() {
 
   useEffect(() => {
     // Calculate target date
-    const targetDate = new Date()
-    targetDate.setDate(targetDate.getDate() + MAINTENANCE_DAYS)
+    let targetDate
+    const storedTargetDate = localStorage.getItem("maintenanceTargetDate")
+
+    if (storedTargetDate) {
+      // Use existing target date from localStorage
+      targetDate = new Date(storedTargetDate)
+    } else {
+      // Create new target date and store it
+      targetDate = new Date()
+      targetDate.setDate(targetDate.getDate() + MAINTENANCE_DAYS)
+      localStorage.setItem("maintenanceTargetDate", targetDate.toISOString())
+    }
 
     const updateTimer = () => {
       const now = new Date().getTime()
@@ -38,6 +48,7 @@ export default function MaintenancePage() {
         setTimeLeft({ days, hours, minutes, seconds })
       } else {
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+        localStorage.removeItem("maintenanceTargetDate")
       }
     }
 
@@ -88,7 +99,6 @@ export default function MaintenancePage() {
         "-=0.5",
       )
 
-
     // Pulse animation for timer numbers
     gsap.to(".timer-number", {
       duration: 1,
@@ -104,7 +114,7 @@ export default function MaintenancePage() {
     <div className=" min-h-screen bg-black flex items-center justify-center p-4 relative overflow-hidden">
       <div className="absolute inset-0">
         <LetterGlitch
-          glitchColors={[ "#374151", "#4b5563","#35e463", "#6b7280"]}
+          glitchColors={["#374151", "#4b5563", "#35e463", "#6b7280"]}
           glitchSpeed={80}
           outerVignette={true}
           centerVignette={false}
@@ -138,7 +148,10 @@ export default function MaintenancePage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-2xl mx-auto">
             {[
-              { label: "Days", value: timeLeft.days },
+              {
+                label: "Days",
+                value: timeLeft.days,
+              },
               { label: "Hours", value: timeLeft.hours },
               { label: "Minutes", value: timeLeft.minutes },
               { label: "Seconds", value: timeLeft.seconds },
