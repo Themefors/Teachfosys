@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import { gsap } from "gsap"
-import LetterGlitch from "../components/LetterGlitch"
+import LetterGlitch from "../Components/LetterGlitch"
 
 export default function MaintenancePage() {
   const MAINTENANCE_DAYS = 7 // You can change this number
@@ -88,14 +88,6 @@ export default function MaintenancePage() {
         "-=0.5",
       )
 
-    // Floating animation for the container
-    // gsap.to(containerRef.current, {
-    //   duration: 3,
-    //   y: -10,
-    //   repeat: -1,
-    //   yoyo: true,
-    //   ease: "power2.inOut",
-    // })
 
     // Pulse animation for timer numbers
     gsap.to(".timer-number", {
