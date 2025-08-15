@@ -170,7 +170,7 @@ export default function MaintenancePage() {
             <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
               {/* Email */}
               <a
-                href="mailto:hello@teachfosys.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@teachfosys.com" target="_blank"
                 className="hover:text-white transition-all duration-300 flex items-center space-x-3 group hover:scale-105"
               >
                 <div className="bg-gradient-to-r from-gray-600 to-gray-800 p-3 rounded-full group-hover:shadow-lg group-hover:shadow-gray-600/25">
