@@ -8,9 +8,6 @@ export default function MaintenancePage() {
   // Month is 0-indexed (0 = January, 11 = December)
   const TARGET_DATE = new Date(2025, 7, 22, 23, 59, 59);// August 22, 2025 at 23:59:59
 
-  // Alternative: You can also set date like this:
-  // const TARGET_DATE = new Date("2024-12-31T23:59:59")
-
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -218,7 +215,7 @@ export default function MaintenancePage() {
 
         {/* Footer */}
         <div className="mt-12 rounded-3xl py-5 text-white  text-sm bg-gray-900/60 backdrop-blur-sm">
-          <p>© 2024 TeachFosys. All rights reserved.</p>
+          <p>© 2024 TeachFosys. All rights reserved.tttt</p>
         </div>
       </div>
     </div>
