@@ -5,8 +5,8 @@ import { gsap } from "gsap"
 import LetterGlitch from "../Components/LetterGlitch"
 
 export default function MaintenancePage() {
-// August 22, 2025 at 23:59:59
-  const TARGET_DATE = new Date(2025, 7, 22, 23, 59, 59);
+  // Month is 0-indexed (0 = January, 11 = December)
+  const TARGET_DATE = new Date(2025, 7, 22, 23, 59, 59);// August 22, 2025 at 23:59:59
 
   // Alternative: You can also set date like this:
   // const TARGET_DATE = new Date("2024-12-31T23:59:59")
