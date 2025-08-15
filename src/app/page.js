@@ -5,7 +5,11 @@ import { gsap } from "gsap"
 import LetterGlitch from "../Components/LetterGlitch"
 
 export default function MaintenancePage() {
-  const MAINTENANCE_DAYS = 7 // You can change this number
+// August 22, 2025 at 23:59:59
+  const TARGET_DATE = new Date(2025, 7, 22, 23, 59, 59);
+
+  // Alternative: You can also set date like this:
+  // const TARGET_DATE = new Date("2024-12-31T23:59:59")
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -21,19 +25,7 @@ export default function MaintenancePage() {
   const contactsRef = useRef(null)
 
   useEffect(() => {
-    // Calculate target date
-    let targetDate
-    const storedTargetDate = localStorage.getItem("maintenanceTargetDate")
-
-    if (storedTargetDate) {
-      // Use existing target date from localStorage
-      targetDate = new Date(storedTargetDate)
-    } else {
-      // Create new target date and store it
-      targetDate = new Date()
-      targetDate.setDate(targetDate.getDate() + MAINTENANCE_DAYS)
-      localStorage.setItem("maintenanceTargetDate", targetDate.toISOString())
-    }
+    const targetDate = TARGET_DATE
 
     const updateTimer = () => {
       const now = new Date().getTime()
@@ -48,7 +40,6 @@ export default function MaintenancePage() {
         setTimeLeft({ days, hours, minutes, seconds })
       } else {
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 })
-        localStorage.removeItem("maintenanceTargetDate")
       }
     }
 
@@ -56,7 +47,7 @@ export default function MaintenancePage() {
     const interval = setInterval(updateTimer, 1000)
 
     return () => clearInterval(interval)
-  }, [MAINTENANCE_DAYS])
+  }, []) // Removed MAINTENANCE_DAYS dependency
 
   useEffect(() => {
     // GSAP animations
