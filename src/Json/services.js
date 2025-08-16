@@ -1,46 +1,63 @@
+import images from "../../public/images";
+
+
+
 const services = [
   {
     id: 1,
-    icon: "/icons/custom-software.svg",
-    title: "Custom Software Solution",
+    title: "Custom Software Development",
     description:
-      "We create tailored software solutions that fit your business needs and streamline operations.",
+      "Our goal is to enable businesses to run smoothly with a seamless workflow. Our tailor-made software solutions are designed to meet your business needs and cover all aspects of your operations. We provide comprehensive technical support for our innovative technology solutions.",
+    icon: images.svg.app
   },
   {
     id: 2,
-    icon: "/icons/website-development.svg",
-    title: "Website Development",
+    title: "Shopify Development",
     description:
-      "Professional websites built with modern technologies, responsive and SEO-friendly.",
+      "We develop themes & apps for Shopify & Shopify Plus stores to offer a distinctive user experience.",
+    icon: images.svg.shopify
   },
   {
     id: 3,
-    icon: "/icons/shopify-development.svg",
-    title: "Shopify Development",
+    title: "Website Development",
     description:
-      "Custom Shopify stores to help you sell online effectively with all essential features.",
+      "We build anything from one page static websites to dynamic web apps with complex features.",
+    icon: images.svg.website
   },
   {
     id: 4,
-    icon: "/icons/wordpress-development.svg",
-    title: "WordPress Development",
+    title: "Ecommerce Development",
     description:
-      "Full-featured WordPress websites, themes, and plugin development tailored for your brand.",
+      "Whether you need a CMS, a custom, or a large-scale ecommerce solution, we can make your vision come true.",
+    icon: images.svg.shopify
   },
   {
     id: 5,
-    icon: "/icons/digital-marketing.svg",
-    title: "Digital Marketing",
+    title: "Mobile Apps Development",
     description:
-      "Grow your online presence with our expert SEO, social media, and marketing strategies.",
+      "Aiming for a MVP or an impressive one? From scratch or upgrading the existing? We are experts in creating apps for small screens.",
+    icon: images.svg.app
   },
   {
     id: 6,
-    icon: "/icons/ui-ux-design.svg",
-    title: "UI/UX Design",
+    title: "UI/UX Design Services",
     description:
-      "Engaging and intuitive user interfaces and experiences designed for maximum impact.",
+      "How do you like your website to look? Minimalist or vibrant? We have a diverse team with diverse portfolios. Name it and we will deliver.",
+    icon: images.svg.uxDesign
   },
-];
-
+  {
+    id: 7,
+    title: "SaaS Development",
+    description:
+      "We create scalable SaaS platforms tailored to your business needs, providing robust architecture and seamless user experience.",
+    icon: images.svg.saas
+  },
+  {
+    id: 8,
+    title: "WordPress Development",
+    description:
+      "We design and develop custom WordPress websites, themes, and plugins to create fully functional and visually appealing websites.",
+    icon: images.svg.wordpress
+  }
+]
 export default services;
