@@ -8,7 +8,7 @@ const services = [
     title: "Custom Software Development",
     description:
       "Our goal is to enable businesses to run smoothly with a seamless workflow. Our tailor-made software solutions are designed to meet your business needs and cover all aspects of your operations. We provide comprehensive technical support for our innovative technology solutions.",
-    icon: images.svg.app
+    icon: images.svg.custom
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const services = [
     title: "Ecommerce Development",
     description:
       "Whether you need a CMS, a custom, or a large-scale ecommerce solution, we can make your vision come true.",
-    icon: images.svg.shopify
+    icon: images.svg.ecommerce
   },
   {
     id: 5,

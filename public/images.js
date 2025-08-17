@@ -10,11 +10,22 @@ import shopify from "./shopify.svg";
 import uxDesign from "./ux-design.svg";
 import wordpress from "./wordpress.svg";
 import website from "./website.svg";
+import call from "./call.png";
+import ecommerce from "./ecommers.svg";
+import custom from "./custom.svg";
+import Enterprises from "./Enterprises.svg"
+import scalUp from "./scalUp.svg";
+import startUp from "./startUp.svg";
+import about from "./about.jpg";
+import arrow from "./arow.svg"
+
 
 
 const images = {
   image: {
-    img1
+    img1,
+    call,
+    about
   },
   svg: {
     bg,
@@ -27,7 +38,13 @@ const images = {
     shopify,
     uxDesign,
     wordpress,
-    website
+    website,
+    ecommerce,
+    custom,
+    Enterprises,
+    scalUp,
+    startUp,
+    arrow
   },
   
 };

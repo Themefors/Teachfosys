@@ -80,10 +80,7 @@ export default function Navbar() {
             <div className="flex items-center space-x-4">
              <Link href="/contact">
       <Button
-        className="bg-[#55e76d] text-white px-6 h-12 text-[18px] font-medium
-          transition-all duration-300 ease-in-out
-          hover:bg-[#4dd663] hover:scale-105 hover:shadow-md
-          active:scale-95"
+        className=" border border-white rounded-[15px_0px_15px_0px] text-white px-6 h-12 text-[18px] font-medium transition-all ease-in-out hover:bg-[#4dd663] hover:scale-105 hover:shadow-md active:scale-95"
       >
         Contact Us
       </Button>
@@ -175,7 +172,7 @@ export default function Navbar() {
                 <span className="font-medium">+880 1234-567890</span>
               </div>
               <Link href="/contact">
-                <Button className="w-full items-center justify-center h-12 gap-2 px-6 text-sm font-medium tracking-wide transition duration-300 rounded focus-visible:outline-none justify-self-center whitespace-nowrap bg-emerald-50 text-emerald-500 hover:bg-emerald-100 hover:text-emerald-600 focus:bg-emerald-200 focus:text-emerald-700 disabled:cursor-not-allowed disabled:border-emerald-300 disabled:bg-emerald-100 disabled:text-emerald-400 disabled:shadow-none">
+                <Button className="w-full border border-white rounded-[15px_0px_15px_0px] text-white px-6 h-12 text-[18px] font-medium transition-all ease-in-out hover:bg-[#4dd663] hover:scale-105 hover:shadow-md active:scale-95">
                   Contact Us
                 </Button>
               </Link>
