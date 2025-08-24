@@ -10,40 +10,39 @@ import images from "../../../../public/images"
 
 gsap.registerPlugin(ScrollTrigger)
 
-
 const WhoWeAre = () => {
-  const sectionRef = useRef(null);  
-  const titleRef = useRef(null);
-  const subtitleRef = useRef(null);
-  const buttonRef = useRef(null);
-  const originalCardsRef = useRef(null);
-  const secondTitleRef = useRef(null);
-  const secondDescRef = useRef(null);
-  const newCardsRef = useRef(null);
+  const sectionRef = useRef(null)
+  const titleRef = useRef(null)
+  const subtitleRef = useRef(null)
+  const buttonRef = useRef(null)
+  const originalCardsRef = useRef(null)
+  const secondTitleRef = useRef(null)
+  const secondDescRef = useRef(null)
+  const newCardsRef = useRef(null)
 
   const newServices = [
-  {
-    id: 1,
-    title: "For Startups",
-    description:
-      "We help startups turn their ideas into reality, with the goal of creating software products that meet the market demand.",
-    icon: images.svg.startUp,
-  },
-  {
-    id: 2,
-    title: "For Scaleups",
-    description:
-      "We help rapidly expanding businesses create new sources of income, scale up their software, and speed up their development process.",
-    icon: images.svg.scalUp,
-  },
-  {
-    id: 3,
-    title: "For Enterprises",
-    description:
-      "We work with enterprises to create and design software products that enhance their market share and competitiveness.",
-    icon: images.svg.Enterprises,
-  },
-]
+    {
+      id: 1,
+      title: "For Startups",
+      description:
+        "We help startups turn their ideas into reality, with the goal of creating software products that meet the market demand.",
+      icon: images.svg.startUp,
+    },
+    {
+      id: 2,
+      title: "For Scaleups",
+      description:
+        "We help rapidly expanding businesses create new sources of income, scale up their software, and speed up their development process.",
+      icon: images.svg.scalUp,
+    },
+    {
+      id: 3,
+      title: "For Enterprises",
+      description:
+        "We work with enterprises to create and design software products that enhance their market share and competitiveness.",
+      icon: images.svg.Enterprises,
+    },
+  ]
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -190,16 +189,22 @@ const WhoWeAre = () => {
       </div>
 
       {/* Original Services Grid */}
-      <div ref={originalCardsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-        {originalServices.map((service) => (
+      <div
+        ref={originalCardsRef}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
+      >
+        {originalServices.map((service, index) => (
           <div
             key={service.id}
-            className="border rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between bg-[#1a1b1f]"
+            className={`border rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between bg-[#1a1b1f]
+           ${index === 0 ? "sm:row-span-2" : ""} ${index === 3 ? "sm:col-span-2" : ""}
+           ${index === 6 ? "sm:row-span-2" : ""}  ${index === 7 ? "sm:col-span-2" : ""}
+           `}
           >
             <div>
               <div className="w-10 h-10 mb-4">
                 <Image
-                  src={service.icon }
+                  src={service.icon}
                   alt={service.title}
                   width={40}
                   height={40}
@@ -218,12 +223,14 @@ const WhoWeAre = () => {
         ))}
       </div>
 
+
+
       {/* New JSON Services Section */}
       <div className="mb-16 pt-20">
         <h2 ref={secondTitleRef} className="text-4xl md:text-[50px] font-medium font-sans text-white mb-4">
           Software Solutions for Any Business
         </h2>
-        <p ref={secondDescRef} className="text-gray-300 md:w-full lg:w-3/4 mb-8">
+        <p ref={secondDescRef} className="text-gray-300 md:w-full lg:w-2/4 mb-8">
           We are a software company with over 10 years of experience in developing and delivering innovative, reliable,
           and scalable software products. We offer a range of services, from web and mobile development, to cloud
           computing, to artificial intelligence, and more.
@@ -245,7 +252,6 @@ const WhoWeAre = () => {
                   />
                   <h4 className="text-xl font-semibold text-white">{service.title}</h4>
                 </div>
-
                 <p className="text-gray-400 text-sm">{service.description}</p>
               </div>
               <Link href="/services" className="mt-6">

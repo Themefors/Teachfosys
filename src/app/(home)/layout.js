@@ -1,6 +1,6 @@
 import { Barlow } from "next/font/google";
-import "./globals.css";
-import Navbar from "../Components/Navbar/Navbar";
+import "../globals.css";
+import Navbar from "../../Components/Navbar/Navbar";
 
 const barlow = Barlow({
   weight: ["400", "600"],
@@ -44,10 +44,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+
   return (
     <html lang="en">
       <body className={`${barlow.variable} antialiased`}>
-        <Navbar />
+       <Navbar />
         {children}
       </body>
     </html>

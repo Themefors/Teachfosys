@@ -1,6 +1,7 @@
-import WhoWeAre from "../Components/Home/WhoWeAre/WhoWeAre";
-import Hero from "../Components/Home/Hero/Hero";
-import AboutUs from "../Components/Home/AboutUs/AboutUs";
+import WhoWeAre from "../../Components/Home/WhoWeAre/WhoWeAre";
+import Hero from "../../Components/Home/Hero/Hero";
+import AboutUs from "../../Components/Home/AboutUs/AboutUs";
+import TeachFosysMenu from "@/Components/Home/teachfosysItems/TeachfosysItems";
 
 export const metadata = {
   title: "TeachFosys | Website Design & Development",
@@ -13,6 +14,7 @@ export default function Home() {
       <div>
       <Hero />
       <AboutUs />
+      <TeachFosysMenu />
       <WhoWeAre />
     </div>
   );

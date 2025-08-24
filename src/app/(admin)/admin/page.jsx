@@ -1,5 +1,6 @@
+import React from 'react';
 
-const Adminpage = () => {
+const page = () => {
     return (
         <div>
             <h1>Admin Dashboard</h1>
